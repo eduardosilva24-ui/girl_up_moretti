@@ -22,6 +22,7 @@ jobs:
     env:
       VITE_APPS_SCRIPT_URL: https://script.google.com/macros/s/AKfycby5h6vc1nvIRFpK2nA_Ryo9tkkC9rtlu8kFi04A6U6YIUkxb5X0XZuxg33Kdf5xRiFH/exec
       VITE_GOOGLE_CLIENT_ID: ${{ vars.VITE_GOOGLE_CLIENT_ID }}
+      VITE_BUILD_OUTPUT: docs
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -44,7 +45,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: dist
+          path: docs
 
   deploy:
     environment:

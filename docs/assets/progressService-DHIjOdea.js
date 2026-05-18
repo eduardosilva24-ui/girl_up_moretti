@@ -1,0 +1,1 @@
+import{d as e}from"./index-BbXdVc8b.js";import{r as a}from"./cacheService-h6FZNeWo.js";async function i(r,s={}){return r?e("getUserProgress",{idToken:r},{signal:s.signal,retries:1}):[]}function m(r,s,t){return e("saveProgress",{idToken:t,moduleId:r,answers:s}).then(o=>(a("progress:me"),o))}export{i as g,m as s};

@@ -5,6 +5,8 @@ export default defineConfig({
   plugins: [react()],
   base: "./",
   build: {
+    outDir: "docs",
+    emptyOutDir: true,
     cssCodeSplit: true,
     sourcemap: false,
     rollupOptions: {
